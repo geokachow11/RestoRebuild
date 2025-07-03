@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Resto-Rebuild</title>
+    <title>Resto-Rebuild - Emergency Restoration Services</title>
+    <meta name="description" content="Professional fire, water, and mold restoration services. 24/7 emergency response. IICRC certified technicians. Call (555) 123-4567 for immediate assistance.">
+    <meta name="keywords" content="restoration, fire damage, water damage, mold remediation, emergency response">
     <style>
         * {
             margin: 0;
@@ -59,11 +61,33 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            animation: pulse 2s infinite;
         }
 
         .phone-link:hover {
             color: #B8860B;
             transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(45deg, #ff4444, #cc0000);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.8; }
         }
 
         /* Dropdown Menu */
@@ -135,7 +159,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 150px 0 80px;
             text-align: center;
             color: #000;
         }
@@ -186,6 +210,55 @@
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 0;
+        }
+
+        .why-choose-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #B8860B;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
         }
 
         /* Services Section */
@@ -286,6 +359,113 @@
             left: 0;
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+            padding: 80px 0;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #B8860B;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #333;
+            padding-top: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #B8860B;
+            text-align: right;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-answer.active {
+            max-height: 200px;
+            padding: 1.5rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: #B8860B;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
@@ -308,6 +488,25 @@
             font-size: 1.2rem;
             color: #000;
             margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item h3 {
+            color: #B8860B;
+            margin-bottom: 1rem;
         }
 
         .contact-phone {
@@ -334,7 +533,41 @@
             background: #000;
             color: #B8860B;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #DAA520;
+        }
+
+        .footer-section a {
+            color: #B8860B;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #DAA520;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            margin-top: 2rem;
         }
 
         /* Responsive Design */
@@ -365,22 +598,41 @@
             .service-card {
                 padding: 2rem;
             }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 EMERGENCY SERVICES AVAILABLE 24/7 - IMMEDIATE RESPONSE GUARANTEED 🚨
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Resto-Rebuild</a>
             <div class="nav-menu">
-                <a href="tel:+15551234567" class="phone-link">📞 Call: (555) 123-4567</a>
+                <a href="tel:+15551234567" class="phone-link">📞 EMERGENCY: (555) 123-4567</a>
                 <div class="dropdown">
                     <button class="dropdown-btn">Menu ▼</button>
                     <div class="dropdown-content">
-                        <a href="#home">🏠 Home Page</a>
-                        <a href="#contact">📧 Contact Page</a>
-                        <a href="#careers">💼 Our Services</a>
+                        <a href="#home">🏠 Home</a>
+                        <a href="#services">🔧 Services</a>
+                        <a href="#testimonials">⭐ Reviews</a>
+                        <a href="#faq">❓ FAQ</a>
+                        <a href="#contact">📧 Contact</a>
                     </div>
                 </div>
             </div>
@@ -391,25 +643,56 @@
     <section class="hero" id="home">
         <div class="hero-container">
             <h1>Fire, water, mold, call Resto we'll be there Presto!</h1>
-            <p>We deliver the greatest services in demolition and remeadiation to all clients.</p>
-            <button class="cta-button">Get your estimate today!</button>
+            <p>We deliver the greatest services in demolition and remediation to all clients.</p>
+            <button class="cta-button" onclick="window.location.href='tel:+15551234567'">Get your estimate today!</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="why-choose-container">
+            <h2 class="section-title">Why Choose Resto-Rebuild?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>24/7 Emergency Response</h3>
+                    <p>We're available round the clock for emergency situations. No waiting - immediate response guaranteed.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h3>IICRC Certified</h3>
+                    <p>Our technicians are professionally trained and certified by the Institute of Inspection, Cleaning and Restoration Certification.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Fully Licensed & Insured</h3>
+                    <p>Complete peace of mind with full licensing, bonding, and comprehensive insurance coverage.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💯</div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>We stand behind our work with a 100% satisfaction guarantee. Your peace of mind is our priority.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="services-container">
             <h2 class="section-title">Our Main Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">🔨</div>
-                    <h3>As needed restoration and remediation needs to satisfy all our customers!</h3>
-                    <p>We build the right plan around your situation and guide you through each and every part of the process in order to restore your property! We use the latest and most proprietary methods to ensure all damages are restored quickly. We take pride in our dedication to customer education, service, our adherence to national standards and best practices.</p>
+                    <h3>Emergency Restoration & Remediation</h3>
+                    <p>We build the right plan around your situation and guide you through each and every part of the process in order to restore your property! We use the latest and most proprietary methods to ensure all damages are restored quickly.</p>
                     <ul class="service-features">
-                        <li>Fire Damage</li>
-                        <li>Water Damage</li>
-                        <li>Mold Accumulation</li>
+                        <li>Fire Damage Restoration</li>
+                        <li>Water Damage Restoration</li>
+                        <li>Mold Remediation</li>
                         <li>Water Mitigation</li>
+                        <li>Smoke & Odor Removal</li>
+                        <li>Emergency Board-Up</li>
                     </ul>
                 </div>
                 
@@ -472,76 +755,112 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Resto-Rebuild saved our home after a devastating fire. Their team was professional, compassionate, and worked tirelessly to restore everything. We couldn't be happier with the results!</p>
+                    <p class="testimonial-author">- Sarah M., Homeowner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">After water damage from a burst pipe, Resto-Rebuild responded immediately and had everything dried and restored within days. Their 24/7 service is truly remarkable.</p>
+                    <p class="testimonial-author">- Mike T., Property Manager</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The mold remediation service was thorough and professional. They explained every step of the process and made sure our family was safe throughout. Highly recommended!</p>
+                    <p class="testimonial-author">- Jennifer L., Homeowner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Do you offer 24/7 emergency services?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We provide 24/7 emergency response services, 365 days a year. When disaster strikes, we're ready to respond immediately to minimize damage and begin the restoration process.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Will my insurance cover the restoration work?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Most insurance policies cover restoration work for covered perils like fire, water, and storm damage. We work directly with insurance companies and can help you navigate the claims process.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How quickly can you respond to an emergency?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We typically respond to emergency calls within 1-2 hours, often sooner. Our rapid response team is strategically positioned to reach you quickly when every minute counts.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Are your technicians certified?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all our technicians are IICRC certified and undergo continuous training to stay current with industry best practices and safety standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
             <h2 class="section-title">Ready to Get Started?</h2>
-            <p>Contact us today for a free consultation and discover how we can transform your business with technology.</p>
+            <p>Contact us today for a free consultation and discover how we can restore your property quickly and professionally.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Emergency Hotline</h3>
+                    <p>Available 24/7<br>(555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>info@resto-rebuild.com<br>estimates@resto-rebuild.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>⏰ Response Time</h3>
+                    <p>Emergency: 1-2 hours<br>Regular: Same day</p>
+                </div>
+            </div>
+            
             <a href="tel:+15551234567" class="contact-phone">📞 Call Now: (555) 123-4567</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Resto-Rebuild. All rights reserved. | Fire, water mold, call Resto we'll be there presto!</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Add scroll effect to navbar
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                } else {
-                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                }
-            });
-
-            // Animate service cards on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe service cards
-            const serviceCards = document.querySelectorAll('.service-card');
-            serviceCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
-</body>
-</html>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="#services">Fire Damage Restoration</a></p>
+                    <p><a href="#services">Water Damage Restoration</a></p>
+                    <p><a href="#services">Mold Remediation</a></p>
+                    <p><a href="#services">Storm Damage Repair</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="#testimonials">Testimonials</a></p>
+                    <p><a href="#faq">FAQ</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Emergency Contact</h
