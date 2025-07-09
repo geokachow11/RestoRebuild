@@ -7,12 +7,6 @@
     <meta name="description" content="Professional fire, water, and mold restoration services. 24/7 emergency response. IICRC certified technicians. Call (732) 226-6377 for immediate assistance.">
     <meta name="keywords" content="restoration, fire damage, water damage, mold remediation, emergency response">
     <style>
-
-
-<div style="display: flex; align-items: center;">
-  <img src="Restologo.jpeg">
-
-        
         * {
             margin: 0;
             padding: 0;
@@ -534,6 +528,81 @@
             box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
         }
 
+        /* Social Media Section */
+        .social-media {
+            background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .social-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-media h2 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .social-media p {
+            color: #000;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s ease;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+        }
+
+        .social-link:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            transform: scale(1.2);
+        }
+
+        .social-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-handle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
         /* Footer */
         .footer {
             background: #000;
@@ -615,6 +684,18 @@
 
             .contact-info {
                 grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .social-link {
+                min-width: auto;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -822,27 +903,4 @@
                 </div>
             </div>
             
-            <a href="tel:+17322266377" class="contact-phone">📞 Call Now: (732) 226-6377</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <p><a href="#services">Fire Damage Restoration</a></p>
-                    <p><a href="#services">Water Damage Restoration</a></p>
-                    <p><a href="#services">Mold Remediation</a></p>
-                    <p><a href="#services">Storm Damage Repair</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <p><a href="#about">About Us</a></p>
-                    <p><a href="#testimonials">Testimonials</a></p>
-                    <p><a href="#faq">FAQ</a></p>
-                    <p><a href="#contact">Contact</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Emergency Contact</h
+            <a href="tel:+17322266377" class="contact-phone">
