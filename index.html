@@ -878,21 +878,21 @@
 <section class="gallery" id="gallery">
   <div class="gallery-container">
     <h2 class="section-title">Project Gallery</h2>
-   <div class="gallery-grid">
-  <img src="IMG_1.jpg" alt="Gallery Image 1" onclick="openFullscreen(this)">
-  <img src="IMG_2.jpg" alt="Gallery Image 2" onclick="openFullscreen(this)">
-  <img src="IMG_3.JPG" alt="Gallery Image 3" onclick="openFullscreen(this)">
-  <img src="IMG_4.JPG" alt="Gallery Image 4" onclick="openFullscreen(this)">
-  <img src="IMG_5.jpg" alt="Gallery Image 5" onclick="openFullscreen(this)">
-  <img src="IMG_6.jpg" alt="Gallery Image 6" onclick="openFullscreen(this)">
-  <img src="IMG_7.jpg" alt="Gallery Image 7" onclick="openFullscreen(this)">
-  <img src="IMG_8.jpg" alt="Gallery Image 8" onclick="openFullscreen(this)">
+    <div class="gallery-grid">
+      <img src="IMG_1.jpg" alt="Gallery Image 1" onclick="openFullscreen(this)">
+      <img src="IMG_2.jpg" alt="Gallery Image 2" onclick="openFullscreen(this)">
+      <img src="IMG_3.JPG" alt="Gallery Image 3" onclick="openFullscreen(this)">
+      <img src="IMG_4.JPG" alt="Gallery Image 4" onclick="openFullscreen(this)">
+      <img src="IMG_5.jpg" alt="Gallery Image 5" onclick="openFullscreen(this)">
+      <img src="IMG_6.jpg" alt="Gallery Image 6" onclick="openFullscreen(this)">
+      <img src="IMG_7.jpg" alt="Gallery Image 7" onclick="openFullscreen(this)">
+      <img src="IMG_8.jpg" alt="Gallery Image 8" onclick="openFullscreen(this)">
+    </div>
+  </div>
+</section>
 
+<!-- Fullscreen Overlay (Place outside section, after gallery) -->
 <div id="fullscreenOverlay" class="fullscreen-overlay" onclick="closeFullscreen()">
-  <img id="fullscreenImage" class="fullscreen-image" src="" alt="Fullscreen Image">
-       
-</div>
-       <div id="fullscreenOverlay" class="fullscreen-overlay" onclick="closeFullscreen()">
   <img id="fullscreenImage" class="fullscreen-image" src="" alt="Fullscreen Image">
 </div>
 
@@ -1024,27 +1024,20 @@
             toggleIcon.classList.toggle('active');
         }
     </script>
-
-    <script>
-  function openFullscreen(imgElement) {
+<script>
+  function openFullscreen(img) {
     const overlay = document.getElementById("fullscreenOverlay");
     const fullscreenImage = document.getElementById("fullscreenImage");
-    fullscreenImage.src = imgElement.src;
+    fullscreenImage.src = img.src;
     overlay.style.display = "flex";
-    document.addEventListener("keydown", handleEscape);
   }
 
   function closeFullscreen() {
-    document.getElementById("fullscreenOverlay").style.display = "none";
-    document.removeEventListener("keydown", handleEscape);
-  }
-
-  function handleEscape(event) {
-    if (event.key === "Escape") {
-      closeFullscreen();
-    }
+    const overlay = document.getElementById("fullscreenOverlay");
+    overlay.style.display = "none";
   }
 </script>
+
 
 </body>
 </html>
