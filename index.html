@@ -707,6 +707,28 @@
                 margin: 0 auto;
             }
         }
+
+        .fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.fullscreen-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
     </style>
 </head>
 <body>
@@ -856,14 +878,18 @@
 <section class="gallery" id="gallery">
   <div class="gallery-container">
     <h2 class="section-title">Project Gallery</h2>
-    <div class="gallery-grid">
-      <img src="image1.jpg" alt="Before restoration">
-      <img src="image2.jpg" alt="After restoration">
-      <img src="image3.jpg" alt="Mold remediation">
-      <img src="image4.jpg" alt="Water damage cleanup">
-    </div>
-  </div>
-</section>
+   <div class="gallery-grid">
+  <img src="image1.jpg" alt="Gallery Image 1" onclick="openFullscreen(this)">
+  <img src="image2.jpg" alt="Gallery Image 2" onclick="openFullscreen(this)">
+  <img src="image3.jpg" alt="Gallery Image 3" onclick="openFullscreen(this)">
+
+<div id="fullscreenOverlay" class="fullscreen-overlay" onclick="closeFullscreen()">
+  <img id="fullscreenImage" class="fullscreen-image" src="" alt="Fullscreen Image">
+       
+</div>
+       <div id="fullscreenOverlay" class="fullscreen-overlay" onclick="closeFullscreen()">
+  <img id="fullscreenImage" class="fullscreen-image" src="" alt="Fullscreen Image">
+</div>
 
 <!-- FAQ Section -->
 <section class="faq" id="faq">
@@ -993,6 +1019,28 @@
             toggleIcon.classList.toggle('active');
         }
     </script>
+
+    <script>
+  function openFullscreen(imgElement) {
+    const overlay = document.getElementById("fullscreenOverlay");
+    const fullscreenImage = document.getElementById("fullscreenImage");
+    fullscreenImage.src = imgElement.src;
+    overlay.style.display = "flex";
+    document.addEventListener("keydown", handleEscape);
+  }
+
+  function closeFullscreen() {
+    document.getElementById("fullscreenOverlay").style.display = "none";
+    document.removeEventListener("keydown", handleEscape);
+  }
+
+  function handleEscape(event) {
+    if (event.key === "Escape") {
+      closeFullscreen();
+    }
+  }
+</script>
+
 </body>
 </html>
 
