@@ -167,6 +167,31 @@
         }
 
         /* Hero Section */
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: 80px;
+  height: auto;
+}
+
+.hero-container {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+
+
+
+
+        
         .hero {
             padding: 150px 0 80px;
             text-align: center;
@@ -776,13 +801,23 @@
 
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <h1>Fire, water, mold, call Resto we'll be there Presto!</h1>
-            <p>We deliver the greatest services in demolition and remediation to all clients.</p>
-            <button class="cta-button" onclick="window.location.href='tel:+7322266377'">Get your estimate today!</button>
-        </div>
-    </section>
+<section class="hero" id="home">
+  <div class="hero-flex">
+    <!-- Left Logo -->
+    <img src="Restologo.jpeg" alt="Resto Logo" class="hero-logo">
+
+    <!-- Main Hero Content -->
+    <div class="hero-container">
+      <h1>Fire, water, mold, call Resto we'll be there Presto!</h1>
+      <p>We deliver the greatest services in demolition and remediation to all clients.</p>
+      <button class="cta-button" onclick="window.location.href='tel:+7322266377'">Get your estimate today!</button>
+    </div>
+
+    <!-- Right Logo -->
+    <img src="Restologo.jpeg" alt="Resto Logo" class="hero-logo">
+  </div>
+</section>
+
 
     <!-- Why Choose Us Section -->
     <section class="why-choose">
